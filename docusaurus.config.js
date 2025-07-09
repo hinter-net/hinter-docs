@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -81,9 +81,21 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'docsSidebar',
+            sidebarId: 'hinterNet',
             position: 'left',
-            label: 'Docs',
+            label: 'Hinter net',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'hinterCore',
+            position: 'left',
+            label: 'hinter-core',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'hinterCline',
+            position: 'left',
+            label: 'hinter-cline',
           },
           /*{to: '/blog', label: 'Blog', position: 'left'},*/
           {
@@ -97,11 +109,23 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'TODO Docs',
+            title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Quickstart',
+                to: '/docs/hinter-net/quickstart',
+              },
+              {
+                label: 'Hinter net',
+                to: '/docs/hinter-net/introduction',
+              },
+              {
+                label: 'hinter-core',
+                to: '/docs/hinter-net/introduction',
+              },
+              {
+                label: 'hinter-cline',
+                to: '/docs/hinter-cline/introduction',
               },
             ],
           },

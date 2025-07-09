@@ -15,20 +15,9 @@
  @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
 const sidebars = {
-  docsSidebar: [
-    'quickstart',
-    'placeholder',
-    {
-      type: 'category',
-      label: 'hinter-core',
-      items: ['hinter-core/placeholder'],
-    },
-    {
-      type: 'category',
-      label: 'hinter-cline',
-      items: ['hinter-cline/placeholder'],
-    },
-  ],
+  hinterNet: ['hinter-net/quickstart', 'hinter-net/introduction'],
+  hinterCore: ['hinter-core/introduction', 'hinter-core/placeholder2'],
+  hinterCline: ['hinter-cline/introduction', 'hinter-cline/placeholder2'],
 };
 
 export default sidebars;
