@@ -4,29 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Collect intelligence',
+    title: 'Curate intelligence',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        TODO
+        Systematically build a private knowledge base, transforming insights into assets.
       </>
     ),
   },
   {
-    title: 'Send personalized reports',
+    title: 'Exchange reports',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        TODO
+        Swap tailored reports with peers to uncover new opportunities and mitigate risks.
       </>
     ),
   },
   {
-    title: 'Spawn secret societies',
+    title: 'Forge an inner circle',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        TODO
+        Establish a high-trust network founded on a history of mutual support.
       </>
     ),
   },
