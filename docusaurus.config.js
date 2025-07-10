@@ -70,7 +70,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/TODO-docusaurus-social-card.jpg',
       navbar: {
         title: '',
@@ -97,7 +96,7 @@ const config = {
             position: 'left',
             label: 'hinter-cline',
           },
-          /*{to: '/blog', label: 'Blog', position: 'left'},*/
+          { to: '/blog', label: 'Blog', position: 'right' },
           {
             href: 'https://github.com/hinter-net',
             label: 'GitHub',
@@ -141,12 +140,10 @@ const config = {
           {
             title: 'More',
             items: [
-              /*
               {
                 label: 'Blog',
                 to: '/blog',
               },
-              */
               {
                 label: 'GitHub',
                 href: 'https://github.com/hinter-net',

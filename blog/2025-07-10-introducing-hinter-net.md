@@ -1,8 +1,7 @@
 ---
-slug: first-blog-post
-title: First Blog Post
-authors: [slorber, yangshun]
-tags: [hola, docusaurus]
+slug: introducing-hinter-net
+title: Introducing hinter net
+authors: [bbenligiray]
 ---
 
 Lorem ipsum dolor sit amet...
