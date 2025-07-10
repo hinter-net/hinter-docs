@@ -27,7 +27,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'bbenligiray', // Usually your GitHub org/user name.
+  organizationName: 'hinter.net', // Usually your GitHub org/user name.
   projectName: 'hinter-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -99,7 +99,7 @@ const config = {
           },
           /*{to: '/blog', label: 'Blog', position: 'left'},*/
           {
-            href: 'https://github.com/bbenligiray/hinter-docs',
+            href: 'https://github.com/hinter-net',
             label: 'GitHub',
             position: 'right',
           },
@@ -111,10 +111,6 @@ const config = {
           {
             title: 'Docs',
             items: [
-              {
-                label: 'Quickstart',
-                to: '/docs/hinter-net/quickstart',
-              },
               {
                 label: 'Hinter net',
                 to: '/docs/hinter-net/introduction',
@@ -130,32 +126,30 @@ const config = {
             ],
           },
           {
-            title: 'TODO Community',
+            title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/api3dao',
               },
               {
                 label: 'X',
-                href: 'https://x.com/docusaurus',
+                href: 'https://x.com/hinter_net',
               },
             ],
           },
           {
-            title: 'TODO More',
+            title: 'More',
             items: [
-              /*{
+              /*
+              {
                 label: 'Blog',
                 to: '/blog',
-              },*/
+              },
+              */
               {
                 label: 'GitHub',
-                href: 'https://github.com/bbenligiray/hinter-docs',
+                href: 'https://github.com/hinter-net',
               },
             ],
           },
