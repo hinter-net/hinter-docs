@@ -15,9 +15,59 @@
  @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
 const sidebars = {
-  hinterNet: ['hinter-net/quickstart', 'hinter-net/introduction'],
-  hinterCore: ['hinter-core/introduction', 'hinter-core/placeholder2'],
-  hinterCline: ['hinter-cline/introduction', 'hinter-cline/placeholder2'],
+  hinterNet: [
+    {
+      type: 'category',
+      label: 'Hinter Net',
+      collapsible: false,
+      items: [
+        'hinter-net/introduction',
+        'hinter-net/use-cases',
+        'hinter-net/quickstart',
+        {
+          type: 'category',
+          label: 'Core Concepts',
+          items: [
+            'hinter-net/core-concepts/collect-and-curate',
+            'hinter-net/core-concepts/exchange-reports',
+            'hinter-net/core-concepts/reputation-network',
+          ],
+        },
+        'hinter-net/design-philosophy',
+        'hinter-net/roadmap',
+        'hinter-net/get-involved',
+      ],
+    },
+  ],
+  hinterCore: [
+    {
+      type: 'category',
+      label: 'hinter-core',
+      collapsible: false,
+      items: [
+        'hinter-core/introduction',
+        'hinter-core/user-guide',
+        'hinter-core/design-and-protocol',
+        'hinter-core/best-practices',
+        'hinter-core/troubleshooting',
+      ],
+    },
+  ],
+  hinterCline: [
+    {
+      type: 'category',
+      label: 'hinter-cline',
+      collapsible: false,
+      items: [
+        'hinter-cline/introduction',
+        'hinter-cline/design-philosophy',
+        'hinter-cline/user-guide',
+        'hinter-cline/workflows',
+        'hinter-cline/best-practices',
+        'hinter-cline/troubleshooting',
+      ],
+    },
+  ],
 };
 
 export default sidebars;
