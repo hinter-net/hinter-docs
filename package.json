@@ -3,15 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "prettier": "prettier --write \"./**/*.md\"",
+    "prettier:check": "prettier --check \"./**/*.md\"",
+    "start": "docusaurus start"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",
@@ -24,7 +18,8 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.8.1",
-    "@docusaurus/types": "3.8.1"
+    "@docusaurus/types": "3.8.1",
+    "prettier": "^3.6.2"
   },
   "browserslist": {
     "production": [
