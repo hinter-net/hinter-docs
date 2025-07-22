@@ -10,7 +10,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Hinter net',
+  title: 'Hinter Net',
   tagline: 'A P2P network for collaborative intelligence',
   favicon: 'img/favicon.ico',
 
@@ -74,7 +74,7 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'Hinter net logo',
+          alt: 'Hinter Net logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -82,7 +82,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'hinterNet',
             position: 'left',
-            label: 'Hinter net',
+            label: 'Hinter Net',
           },
           {
             type: 'docSidebar',
@@ -111,7 +111,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Hinter net',
+                label: 'Hinter Net',
                 to: '/docs/hinter-net/introduction',
               },
               {
