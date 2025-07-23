@@ -1,11 +1,13 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import {useColorMode} from '@docusaurus/theme-common';
 
 const FeatureList = [
   {
     title: 'Curate intelligence',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    SvgLight: require('@site/static/img/icon-1-light.svg').default,
+    SvgDark: require('@site/static/img/icon-1-dark.svg').default,
     description: (
       <>
         Systematically build a private knowledge base, transforming insights into assets.
@@ -14,7 +16,8 @@ const FeatureList = [
   },
   {
     title: 'Exchange reports',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    SvgLight: require('@site/static/img/icon-2-light.svg').default,
+    SvgDark: require('@site/static/img/icon-2-dark.svg').default,
     description: (
       <>
         Swap tailored reports with peers to uncover new opportunities and mitigate risks.
@@ -23,7 +26,8 @@ const FeatureList = [
   },
   {
     title: 'Forge an inner circle',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    SvgLight: require('@site/static/img/icon-3-light.svg').default,
+    SvgDark: require('@site/static/img/icon-3-dark.svg').default,
     description: (
       <>
         Establish a high-trust network founded on a history of mutual support.
@@ -32,7 +36,9 @@ const FeatureList = [
   },
 ];
 
-function Feature({ Svg, title, description }) {
+function Feature({SvgLight, SvgDark, title, description}) {
+  const {colorMode} = useColorMode();
+  const Svg = colorMode === 'dark' ? SvgDark : SvgLight;
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">

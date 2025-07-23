@@ -70,7 +70,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/TODO-docusaurus-social-card.jpg',
+      image: 'img/hinter-net-social-card.jpg',
       navbar: {
         title: '',
         logo: {
