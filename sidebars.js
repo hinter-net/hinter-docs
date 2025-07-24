@@ -60,11 +60,9 @@ const sidebars = {
       collapsible: false,
       items: [
         'hinter-cline/introduction',
-        'hinter-cline/design-philosophy',
         'hinter-cline/user-guide',
         'hinter-cline/workflows',
         'hinter-cline/best-practices',
-        'hinter-cline/troubleshooting',
       ],
     },
   ],
