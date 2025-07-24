@@ -48,7 +48,8 @@ It needs to be running in the background to send and receive reports.
 
 ## Step 2: Run hinter-cline
 
-hinter-cline is your command center, providing a VS Code interface in your browser, which comes pre-installed with Cline, an AI assistant extension for VS Code.
+hinter-cline is your command center, providing a VS Code interface in your browser.
+It comes with Cline, an AI assistant extension for VS Code.
 
 1.  **Start hinter-cline in the Background**
 
@@ -80,7 +81,7 @@ Now you're ready to connect with a peer.
 You'll need their 64-character public key.
 
 :::tip Find Your First Peer
-If you don't know anyone to connect with, check out the **[Get Involved](./get-involved.md)** page for tips on how to find your first peers in the community.
+If you don't know anyone to connect with, check out the **[Get Involved](./get-involved.md)** page for tips on how to find your first peers.
 :::
 
 1.  **Open a Terminal in hinter-cline**

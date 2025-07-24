@@ -11,7 +11,7 @@ It's a space where you cultivate knowledge over time, a collection of interconne
 
 - **Create Topic-based Entries**: Create pages for people, projects, companies, or concepts that are important to you.
 - **Edit and Refine**: As you learn more, update your entries. Your knowledge base should evolve with your understanding.
-- **Interlink Your Notes**: Hyperlink related ideas to create a rich, contextual web of information that both you and the AI assistant can later navigate.
+- **Interlink Your Notes**: Hyperlink related ideas to create a rich, contextual web of information that both you and your AI assistant can later navigate.
 
 ## Index Peer Intelligence
 

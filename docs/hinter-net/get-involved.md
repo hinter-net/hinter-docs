@@ -1,24 +1,16 @@
 # Get Involved
 
-The most important work in the Hinter Net ecosystem is building the network, not building the software.
-The project's success is measured by the influence and effectiveness of the human networks built upon it.
-Therefore, the most valuable contribution you can make is to become an active and reliable node.
+The most valuable contribution is to use Hinter Net to connect with your peers and expand the network by onboarding new ones.
 
-## Become a Hinter
+## Finding Your First Peers
 
-The best way to support and grow the network is simply to use it.
-You can start doing that following the **[Quickstart.](./quickstart.md)**
-
-### Finding Your First Peers
-
-A common question is: "I like what I hear, but I don't know anyone to add. What do I do?"
-
-Building your initial network is the first step. Here are some suggestions:
+A common question is: "I like what I hear but I don't know who to add. What do I do?"
+Here are some suggestions:
 
 - **Start with a Few People You Already Trust**: Think about colleagues, friends, or collaborators with whom you already share information.
   Introduce them to Hinter Net and see if they're interested in a more secure and efficient way to communicate.
 - **Leverage Your Peers' Networks**: The next best thing to a person you trust is a person trusted by someone you trust.
-  Ask your initial peers to introduce you to valuable contacts in their own networks and help you onboard them as new hinters.
+  Ask your initial peers to introduce you to suitable contacts in their own networks and help you onboard them as new hinters.
   This is the primary way a high-trust network expands.
 - **Use the Public Channels**: The public channels listed below, especially the Discord, are the designated places to find other new users.
   Introduce yourself, state your interests, and you will likely find others who are also looking to build their first connections.
@@ -41,7 +33,7 @@ We do not encourage contributions to the official hinter-core and hinter-cline r
 Instead, contribution through code should be driven by real-world necessity as you build your network.
 The protocol is open, and we explicitly encourage developers to:
 
-- **Build Alternative Clients**: If hinter-cline doesn't suit your workflow, build a new one.
+- **Build Alternative Clients**: If hinter-cline doesn't suit your workflow, build an alternative.
   The hinter-core protocol is the foundation you can build upon.
 - **Create Companion Tooling**: See a need for a mobile client, a data visualization tool, or an automated scraper?
   Build it.

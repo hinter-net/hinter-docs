@@ -20,7 +20,7 @@ We explicitly encourage and support the community to develop alternative clients
 :::danger Always Verify
 This freedom is powerful, but it comes with a responsibility.
 When you use a client not officially supported by the core team, you are trusting that client with your data.
-Always carefully review the source code and security practices of any third-party tool before using it.
+Always carefully review the source code and security practices of any tool before using it.
 :::
 
 ### 3. Extended by the Community

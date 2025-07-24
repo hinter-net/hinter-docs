@@ -13,7 +13,7 @@ Your entire knowledge base—your private entries, your peer configurations, and
 You can back it up, encrypt it, or delete it at any time.
 At no point is your private data uploaded to a cloud service or third-party platform.
 
-## Peer-to-Peer Architecture
+## Peer-to-peer Architecture
 
 There are no central servers in Hinter Net.
 All communication happens directly between the machines of you and your peers.
@@ -24,13 +24,13 @@ Even if an attacker were to intercept the network traffic, it would be unintelli
 
 We actively prioritize locally hosted models over external API services to fully protect user sovereignty.
 Consequently, we do not build official tools that favor specific commercial AI services like GitHub Copilot, Gemini CLI or Claude Code.
-We also deliberately avoid designing core workflows that demand massive context windows or specialized agentic capabilities, which create a soft vendor lock-in.
+We also deliberately avoid designing core workflows that demand massive context windows or specialized agentic capabilities, which may create a soft vendor lock-in.
 The ideal and strongly recommended path is to power your AI assistant with a local LLM.
 
 :::info The Future is Local
 We recognize that hosting capable LLMs locally is still an emerging capability.
 However, it is safe to view this as a temporary bottleneck.
-You do not need the state-of-the-art model; just an _adequate_ one, which will soon be easily achievable with local setups.
+You do not need the state-of-the-art model; just an adequate one, which will be widely achievable with local setups soon enough.
 :::
 
 ## Hinter Net vs. Alternatives

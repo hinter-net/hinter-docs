@@ -11,6 +11,7 @@ This could be:
 - A speculative analysis on a stealth startup that just raised a seed round.
 - A catalog of persons of interest, mapping out potential warm contact points for future opportunities.
 - A disclosure of a potential exploit in a widely-used protocol.
+- A curated "meme folder" that captures the evolving culture and in-jokes of a specific online community.
 
 The hinter-core protocol handles the secure, peer-to-peer exchange of these reports, ensuring they are delivered directly and privately.
 
