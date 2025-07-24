@@ -33,11 +33,9 @@ We do not encourage contributions to the official hinter-core and hinter-cline r
 Instead, contribution through code should be driven by real-world necessity as you build your network.
 The protocol is open, and we explicitly encourage developers to:
 
-- **Build Alternative Clients**: If hinter-cline doesn't suit your workflow, build an alternative.
-  The hinter-core protocol is the foundation you can build upon.
+- **Build Alternative Clients**: If hinter-cline doesn't suit your workflow, build a hinter-core-compatible alternative.
 - **Create Companion Tooling**: See a need for a mobile client, a data visualization tool, or an automated scraper?
   Build it.
-  The ecosystem is defined by what its users create to solve their own problems.
 - **Fork and Modify**: If you disagree with the direction of the official tools, you are free to fork them and create your own versions.
 
 This permissionless innovation is key to a resilient and decentralized network.

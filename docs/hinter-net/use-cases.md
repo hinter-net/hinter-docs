@@ -47,9 +47,9 @@ For example:
 
 For the individual, AI's primary value lies in augmenting our ability to enact personal agency in the world.
 It's a tool to compensate for our weaknesses and enhance our strengths.
-A talented developer, for instance, might not need an AI to write code, but they could gain a significant advantage by using it to manage their professional network—a skill where many technical experts are less practiced.
+For example, a talented developer would gain more value from using AI to manage their professional network than from assistance with coding—a skill they have already mastered.
 
-This addresses a fundamental challenge of modern life, one that affects everyone.
+This need for better networking isn't unique to developers; it addresses a fundamental challenge of modern life that everyone faces.
 Meaningful networking requires us to pay attention to one another.
 Yet, the digital systems we use are often designed to capture and monetize our attention, distracting and isolating us as a means of control.
 We all feel the strain of being manipulated at scale, which makes genuine connection harder to achieve.

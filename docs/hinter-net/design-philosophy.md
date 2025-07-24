@@ -4,7 +4,7 @@ For Hinter Net to reach its full potential, you must be able to trust it with yo
 This level of trust is fundamentally incompatible with the proprietary, centralized, and surveillance-based communication and AI solutions.
 
 Hinter Net is built on the core principle of end-to-end user sovereignty.
-The system is architected to function with zero reliance on external servers, ensuring that you can go completely offline and air-gapped if your use case demands it.
+The system is architected to function with zero reliance on external servers, ensuring that you can go completely offline if your use case demands it.
 
 ## Data Sovereignty
 
