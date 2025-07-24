@@ -1,4 +1,4 @@
-# Collect and Curate Intelligence
+# Curate Intelligence
 
 The foundation of any effective intelligence work is a systematic approach to collecting and curating information.
 In Hinter Net, your private knowledge base is your primary asset.

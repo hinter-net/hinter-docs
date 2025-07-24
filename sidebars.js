@@ -28,7 +28,7 @@ const sidebars = {
           type: 'category',
           label: 'Core Concepts',
           items: [
-            'hinter-net/core-concepts/collect-and-curate',
+            'hinter-net/core-concepts/curate-intelligence',
             'hinter-net/core-concepts/exchange-reports',
             'hinter-net/core-concepts/reputation-network',
           ],
