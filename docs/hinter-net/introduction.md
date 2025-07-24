@@ -11,5 +11,5 @@ These networks allow for sharing and contextualizing sensitive information and m
 
 This AI-augmented networking experience is delivered through two core applications, which provide the foundational tools for you to build and leverage your own intelligence network:
 
-- **hinter-core**: Powers the secure, peer-to-peer exchange of reports.
-- **hinter-cline**: Serves as the AI-assisted command center for processing intelligence and composing reports.
+- **[hinter-core](../hinter-core/introduction.md)**: Powers the secure, peer-to-peer exchange of reports.
+- **[hinter-cline](../hinter-cline/introduction.md)**: Serves as the AI-assisted command center for processing intelligence and composing reports.
