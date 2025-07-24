@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "deploy": "docusaurus deploy",
     "prettier": "prettier --write \"./**/*.md\"",
     "prettier:check": "prettier --check \"./**/*.md\"",
     "start": "docusaurus start"
