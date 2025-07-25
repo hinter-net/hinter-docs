@@ -116,7 +116,7 @@ const config = {
               },
               {
                 label: 'hinter-core',
-                to: '/docs/hinter-net/introduction',
+                to: '/docs/hinter-core/introduction',
               },
               {
                 label: 'hinter-cline',
