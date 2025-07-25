@@ -1,5 +1,9 @@
 # User Guide
 
+:::info Prerequisites
+This guide assumes you have completed the [Quickstart guide](../hinter-net/quickstart.md).
+:::
+
 While hinter-core runs as a headless background service, it is managed entirely through its file structure.
 Understanding its directories and configuration files is key to managing your network and troubleshooting issues.
 All of your data is stored in the `hinter-core-data/` directory.
@@ -44,7 +48,7 @@ Create a file at `hinter-core-data/hinter.config.json` to set global defaults fo
 - `disableIncomingReports` (boolean, optional, default: `false`): If `true`, your hinter-core instance will not listen for or accept any incoming reports from any peer.
 - `peerSizeLimitMB` (number, optional, default: `1024`): The maximum size (in megabytes) a peer's `incoming/` directory can reach before they are automatically blacklisted to prevent abuse.
 
-:::tip Managing Blacklisting
+:::info Managing Blacklisting
 When the `peerSizeLimitMB` is exceeded, the peer is blacklisted by creating an empty file named `.blacklisted` in their peer directory.
 To undo the blacklisting, the conditions that caused the blacklisting must be reversed, and this file needs to be deleted manually.
 :::

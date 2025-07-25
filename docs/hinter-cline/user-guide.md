@@ -1,5 +1,9 @@
 # User Guide
 
+:::info Prerequisites
+This guide assumes you have completed the [Quickstart guide](../hinter-net/quickstart.md).
+:::
+
 The primary way you will manage your peers, groups, and reports is through the interactive command-line helper tool.
 
 ## Running the Tool
@@ -55,7 +59,7 @@ When you run `Sync reports`, the content of this file will be sent to `peer-alia
 
 ## Git-based Workflow
 
-The `hinter-cline` container automatically initializes your `hinter-core-data` directory as a Git repository on its first run.
+The `hinter-cline` container automatically initializes your `hinter-core-data/` directory as a Git repository on its first run.
 This means any new reports you receive or entries you create will appear as changes in `git diff`.
 
 You are encouraged to commit these changes periodically to create checkpoints in your knowledge base's history.

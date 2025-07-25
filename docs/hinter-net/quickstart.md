@@ -117,7 +117,7 @@ Your peer needs to add you back!
 
     Copy the entire `PUBLIC_KEY` value.
 
-    :::danger Protect Your Secret Key
+    :::warning Protect Your Secret Key
     Never share your `SECRET_KEY` with anyone.
     Sharing it would allow others to impersonate you on the network.
     :::
@@ -143,12 +143,12 @@ This is a two-step process.
     - Go back to the main menu of the helper tool.
     - Select the "Sync reports" option.
 
-    This command scans your draft, prepares it, and hands it off to hinter-core, which sends it to your peer.
+    This command detects your draft, prepares it by removing its frontmatter (the header enclosed by `---`), and hands it off to hinter-core, which sends it to your peer.
     That's it!
 
 ## What's Next?
 
-You've successfully set up your Hinter Net node and exchanged your first piece of intelligence!
+You've successfully set up your node and exchanged your first piece of intelligence!
 
 To dive deeper, check out the user guides:
 

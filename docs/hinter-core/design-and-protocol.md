@@ -25,8 +25,8 @@ This approach offers several advantages for a young and evolving project:
 - **Accuracy**: The implementation is, by definition, always 100% compliant with the protocol.
 - **Pragmatism**: It prioritizes a working system over abstract documentation, ensuring that development is grounded in practical reality.
 
-:::tip hinter-core Alternatives
-This also means that users can maintain hinter-core alternatives as long as they play nice with the canonical hinter-core implementation.
+:::info hinter-core Alternatives
+This implies that users can maintain hinter-core alternatives as long as they are compatible with the canonical hinter-core implementation.
 :::
 
 ### Focused Responsibility
@@ -37,14 +37,19 @@ This strict separation of concerns ensures that hinter-core can be optimized for
 
 ## Protocol Implementation
 
-Under the hood, hinter-core uses **Corestore**, a collection of modules for building peer-to-peer, append-only logs.
-When you share reports with a peer, you are actually sharing a Corestore.
+Under the hood, hinter-core uses a collection of modules for building peer-to-peer, append-only logs.
 
 ### How Synchronization Works
 
-1.  **Append-Only Log**: Each peer's `outgoing/` directory is treated as an append-only log. When you add, modify, or delete a file, a new entry is appended to this log, creating a verifiable history of changes.
-2.  **Peer Connection**: When your hinter-core instance connects to a peer, they compare their versions of the log.
-3.  **Replication**: Each peer downloads the changes they are missing from the other. Because the logs are append-only, this process is very efficient. The peers only need to sync the latest changes, not the entire directory, each time they connect.
-4.  **File System Mirroring**: As hinter-core receives new log entries from a peer, it mirrors those changes to the corresponding `incoming/{PEER_ALIAS}` directory on your file system, ensuring your local view is always up-to-date with the latest version of the shared data.
+Synchronization in hinter-core is a process of mirroring a sender's `outgoing/` directory to a recipient's `incoming/{SENDER_ALIAS}` directory.
+The sender's directory is treated as the definitive source of truth.
 
-This append-only log structure provides a robust and efficient way to keep directories synchronized between peers in a decentralized manner.
+1.  **Append-only Log**: Each peer maintains an append-only log of its `outgoing/` directory.
+    When a file is added, modified, or deleted, a new entry is appended to this log, creating a verifiable history of changes.
+2.  **Peer Connection**: When two peers connect, they exchange information about their logs.
+3.  **One-Way Mirroring**: For each peer connection, the synchronization is one-way.
+    The recipient peer downloads any changes it is missing from the sender's log.
+    The recipient always defers to the sender's log; the sender's machine knows best what it wants to send.
+4.  **File System Update**: As the recipient receives new log entries, it updates its `incoming/{SENDER_ALIAS}` directory to perfectly mirror the sender's `outgoing/` directory.
+
+This append-only log structure provides a robust and efficient way to keep directories synchronized between peers in a decentralized manner, with a clear chain of authority for the data being exchanged.

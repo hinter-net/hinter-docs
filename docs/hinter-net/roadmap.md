@@ -17,7 +17,7 @@ While hinter-cline is designed to be a complete and adequately user-friendly cli
 The hinter-core application is what defines the underlying protocol through its implementation.
 We explicitly encourage and support the community to develop alternative clients on top of this core.
 
-:::danger Always Verify
+:::warning Always Verify
 This freedom is powerful, but it comes with a responsibility.
 When you use a client not officially supported by the core team, you are trusting that client with your data.
 Always carefully review the source code and security practices of any tool before using it.
@@ -30,7 +30,7 @@ The core team will focus on maintaining a bare minimum set of tools, while users
 
 ## The Most Important Contribution: Using the Network
 
-This leads to the most critical point in our philosophy: **the best way to contribute to Hinter Net is to use it.**
+This leads to the most critical point in our philosophy: **The best way to contribute to Hinter Net is to use it.**
 
 The project's ultimate goal is to help you forge an expansive and influential intelligence network.
 This is the real work.

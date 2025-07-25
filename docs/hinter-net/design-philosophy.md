@@ -1,7 +1,7 @@
 # Design Philosophy
 
 For Hinter Net to reach its full potential, you must be able to trust it with your most sensitive information.
-This level of trust is fundamentally incompatible with the proprietary, centralized, and surveillance-based communication and AI solutions.
+This level of trust is fundamentally incompatible with proprietary and centralized communication and AI solutions that are meant to power surveillance-based business models.
 
 Hinter Net is built on the core principle of end-to-end user sovereignty.
 The system is architected to function with zero reliance on external servers, ensuring that you can go completely offline if your use case demands it.
@@ -9,7 +9,7 @@ The system is architected to function with zero reliance on external servers, en
 ## Data Sovereignty
 
 You own your data.
-Your entire knowledge base—your private entries, your peer configurations, and all your reports—is stored locally in the `hinter-core-data/` directory on your own machine.
+Your entire knowledge base—your private entries, your peer configurations, and all your reports—is stored locally on your own machine.
 You can back it up, encrypt it, or delete it at any time.
 At no point is your private data uploaded to a cloud service or third-party platform.
 
