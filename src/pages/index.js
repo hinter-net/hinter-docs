@@ -32,7 +32,6 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hinter net`}
       description="A P2P network for collaborative intelligence">
       <HomepageHeader />
       <main>
