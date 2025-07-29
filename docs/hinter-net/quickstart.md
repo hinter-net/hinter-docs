@@ -56,7 +56,7 @@ It comes with Cline, an AI assistant extension for VS Code.
     In your terminal, run:
 
     ```sh
-    docker run -d --name my-hinter-cline --restart=always -p 8080:8080 -v"$(pwd)/hinter-core-data":/app/hinter-core-data bbenligiray/hinter-cline:0.1.0
+    docker run -d --name my-hinter-cline --restart=always -p 8080:8080 -v"$(pwd)/hinter-core-data":/app/hinter-core-data bbenligiray/hinter-cline:0.1.1
     ```
 
     This starts the hinter-cline container and makes it accessible on port `8080`.
