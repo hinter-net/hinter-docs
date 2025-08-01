@@ -28,6 +28,11 @@ It needs to be running in the background to send and receive reports.
 
     This creates a `hinter-core-data/` directory in your current location, which will store all your data and your unique cryptographic keypair.
 
+    :::tip Do not use Command Prompt on Windows
+    Use PowerShell or WSL CLI, and not the Command Prompt (CMD) on Windows.
+    For example, the terminal in Docker Desktop uses PowerShell by default and is suitable to run these commands.
+    :::
+
 2.  **Start hinter-core in the Background**
 
     Now, run this command to start the hinter-core container.
