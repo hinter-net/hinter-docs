@@ -23,7 +23,7 @@ It needs to be running in the background to send and receive reports.
     Open a terminal and run the following command.
 
     ```sh
-    docker run -it --rm -v"$(pwd)/hinter-core-data":/app/hinter-core-data bbenligiray/hinter-core:0.1.0 npm run initialize
+    docker run -it --rm -v"$(pwd)/hinter-core-data":/hinter-core/hinter-core-data bbenligiray/hinter-core:0.1.1 npm run initialize
     ```
 
     This creates a `hinter-core-data/` directory in your current location, which will store all your data and your unique cryptographic keypair.
@@ -39,7 +39,7 @@ It needs to be running in the background to send and receive reports.
     It's set to always restart, so it will launch automatically even after you restart your computer.
 
     ```sh
-    docker run -d --name my-hinter-core --restart=always --network host -v"$(pwd)/hinter-core-data":/app/hinter-core-data bbenligiray/hinter-core:0.1.0
+    docker run -d --name my-hinter-core --restart=always --network host -v"$(pwd)/hinter-core-data":/hinter-core/hinter-core-data bbenligiray/hinter-core:0.1.1
     ```
 
     :::tip Check Your Logs
@@ -61,7 +61,7 @@ It comes with Cline, an AI assistant extension for VS Code.
     In your terminal, run:
 
     ```sh
-    docker run -d --name my-hinter-cline --restart=always -p 8080:8080 -v"$(pwd)/hinter-core-data":/app/hinter-core-data bbenligiray/hinter-cline:0.1.1
+    docker run -d --name my-hinter-cline --restart=always -p 8080:8080 -v"$(pwd)/hinter-core-data":/hinter-cline/hinter-core-data bbenligiray/hinter-cline:0.2.0
     ```
 
     This starts the hinter-cline container and makes it accessible on port `8080`.
