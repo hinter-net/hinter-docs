@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run build:llms && npm run build:docusaurus",
     "build:docusaurus": "docusaurus build",
-    "build:llms": "node scripts/create-llms-files.mjs",
+    "build:llms": "node scripts/create-llms-files.js",
     "deploy": "docusaurus deploy",
     "prettier": "prettier --write \"./**/*.md\"",
     "prettier:check": "prettier --check \"./**/*.md\"",

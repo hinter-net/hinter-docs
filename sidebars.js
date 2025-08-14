@@ -68,4 +68,4 @@ const sidebars = {
   ],
 };
 
-export default sidebars;
+module.exports = sidebars;
