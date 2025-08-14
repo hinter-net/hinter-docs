@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const sidebars = require('../sidebars.js').default;
 
 const docsDir = path.join(__dirname, '..', 'docs');
 const staticDir = path.join(__dirname, '..', 'static');
@@ -19,9 +18,12 @@ function getMarkdownFiles(items) {
   return files;
 }
 
-function generateLlmsTxt() {
-  let content = '# Hinter Net\n\n';
-  content += `> Hinter Net is a peer-to-peer network for collaborative intelligence. It combines a secure, decentralized communication protocol (hinter-core) with a powerful, AI-assisted command center (hinter-cline) to help users build high-trust, private networks for sharing and contextualizing sensitive information.\n\n`;
+async function generateLlmsTxt() {
+  const sidebarsModule = await import('../sidebars.js');
+  const sidebars = sidebarsModule.default;
+
+  let content = '# Hinter.Net\n\n';
+  content += `> Hinter.Net is a peer-to-peer network for collaborative intelligence. It combines a secure, decentralized communication protocol (hinter-core) with a powerful, AI-assisted command center (hinter-cline) to help users build high-trust, private networks for sharing and contextualizing sensitive information.\n\n`;
 
   const order = ['hinterNet', 'hinterCore', 'hinterCline'];
 
@@ -72,12 +74,17 @@ function generateLlmsFullTxt() {
   console.log(`Successfully created ${llmsFullTxtPath}`);
 }
 
-try {
-  if (!fs.existsSync(staticDir)) {
-    fs.mkdirSync(staticDir, { recursive: true });
+async function main() {
+  try {
+    if (!fs.existsSync(staticDir)) {
+      fs.mkdirSync(staticDir, { recursive: true });
+    }
+    await generateLlmsTxt();
+    generateLlmsFullTxt();
+  } catch (err) {
+    console.error('Error creating llms files:', err);
+    process.exit(1);
   }
-  generateLlmsTxt();
-  generateLlmsFullTxt();
-} catch (err) {
-  console.error('Error creating llms files:', err);
 }
+
+main();
