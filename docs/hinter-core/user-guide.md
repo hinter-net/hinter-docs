@@ -123,6 +123,11 @@ docker stop my-hinter-core
 docker rm my-hinter-core
 ```
 
-Copy over your `hinter-core-data/` directory to your new machine in its entirety.
+Copy over your `hinter-core-data/` directory to the new machine in its entirety.
 
-Follow the [Quickstart guide](../hinter-net/quickstart.md), skipping the initialization step.
+Follow the [Quickstart guide](../hinter-net/quickstart.md) to start hinter-core on the new machine, skipping the initialization step.
+
+:::warning Avoid Parallel Instances With the Same Keypair
+hinter-core is designed to be operated as a single instance.
+Avoid running multiple instances with the same keypair.
+:::
