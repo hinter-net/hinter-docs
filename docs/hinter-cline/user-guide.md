@@ -79,4 +79,9 @@ docker rm my-hinter-cline
 
 Then, start hinter-cline using the command provided by the current [Quickstart guide](../hinter-net/quickstart.md), which will use the latest version.
 
+:::info Migrating Through Breaking Changes
+Some releases introduce breaking changes that require the user to handle.
+Always read the respective [Release Notes](https://github.com/hinter-net/hinter-cline/releases) before upgrading.
+:::
+
 You can visit http://localhost:8080 to ensure the new version started correctly.

@@ -84,6 +84,11 @@ docker rm my-hinter-core
 
 Then, start hinter-core using the command provided by the current [Quickstart guide](../hinter-net/quickstart.md), which will use the latest version.
 
+:::info Migrating Through Breaking Changes
+Some releases introduce breaking changes that require the user to handle.
+Always read the respective [Release Notes](https://github.com/hinter-net/hinter-core/releases) before upgrading.
+:::
+
 You can check the logs to ensure the new version started correctly.
 
 ```sh
