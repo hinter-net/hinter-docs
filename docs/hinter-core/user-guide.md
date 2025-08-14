@@ -70,3 +70,27 @@ You can also add any of the global configuration keys here to override the defau
   "peerSizeLimitMB": 2048
 }
 ```
+
+## How to
+
+### Upgrade hinter-core to latest version
+
+Stop and remove the container named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
+
+```sh
+docker stop my-hinter-core
+docker rm my-hinter-core
+```
+
+Then, start hinter-core using the command provided by the current [Quickstart guide](../hinter-net/quickstart.md), which will use the latest version.
+
+:::info Migrating Through Breaking Changes
+Some releases introduce breaking changes that require the user to handle.
+Always read the respective [Release Notes](https://github.com/hinter-net/hinter-core/releases) before upgrading.
+:::
+
+You can check the logs to ensure the new version started correctly.
+
+```sh
+docker logs my-hinter-core
+```
