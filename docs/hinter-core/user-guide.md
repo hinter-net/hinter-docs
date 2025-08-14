@@ -73,7 +73,7 @@ You can also add any of the global configuration keys here to override the defau
 
 ## How to
 
-### Upgrade hinter-core to latest version
+### Upgrade hinter-core to Latest Version
 
 Stop and remove the container named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
 
@@ -95,7 +95,7 @@ You can check the logs to ensure the new version started correctly.
 docker logs my-hinter-core
 ```
 
-### Update keypair
+### Update Keypair
 
 You may want to update your keypair if it is compromised, or as a regular security practice.
 To do so, Stop the container named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
@@ -114,7 +114,7 @@ docker start my-hinter-core
 
 Finally, you must share your new public key with your peers for them to be able to update your peer configuration on their end.
 
-### Migrate to a New Machine
+### Migrate to Another Machine
 
 Stop and remove the container named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
 

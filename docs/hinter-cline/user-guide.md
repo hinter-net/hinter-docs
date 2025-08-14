@@ -68,7 +68,7 @@ You can review the diffs yourself in the VS Code interface or have your AI assis
 
 ## How to
 
-### Upgrade hinter-cline to latest version
+### Upgrade hinter-cline to Latest Version
 
 Stop and remove the container named `my-hinter-cline` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
 
