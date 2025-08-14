@@ -65,3 +65,18 @@ This means any new reports you receive or entries you create will appear as chan
 You are encouraged to commit these changes periodically to create checkpoints in your knowledge base's history.
 You don't need to worry about crafting perfect, navigable commit histories; the primary utility is in being able to easily review changes since your last session.
 You can review the diffs yourself in the VS Code interface or have your AI assistant do it for you.
+
+## How to
+
+### Upgrade hinter-cline to latest version
+
+Stop and remove the container named `my-hinter-cline` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
+
+```sh
+docker stop my-hinter-cline
+docker rm my-hinter-cline
+```
+
+Then, start hinter-cline using the command provided by the current [Quickstart guide](../hinter-net/quickstart.md), which will use the latest version.
+
+You can visit http://localhost:8080 to ensure the new version started correctly.
