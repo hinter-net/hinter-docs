@@ -113,3 +113,16 @@ docker start my-hinter-core
 ```
 
 Finally, you must share your new public key with your peers for them to be able to update your peer configuration on their end.
+
+### Migrate to a New Machine
+
+Stop and remove the container named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
+
+```sh
+docker stop my-hinter-core
+docker rm my-hinter-core
+```
+
+Copy over your `hinter-core-data/` directory to your new machine in its entirety.
+
+Follow the [Quickstart guide](../hinter-net/quickstart.md), skipping the initialization step.
