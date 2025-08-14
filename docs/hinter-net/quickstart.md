@@ -11,6 +11,7 @@ You also don't need to install any other development tools on your machine.
 
   :::info Host Networking Required
   Host networking is required for hinter-core to communicate with peers.
+  If you find yourself having networking issues due to the host networking feature not working reliably, you can try [running hinter-core without Docker](../hinter-core/troubleshooting.md#running-hinter-core-without-docker).
   :::
 
 ## Step 1: Run hinter-core
