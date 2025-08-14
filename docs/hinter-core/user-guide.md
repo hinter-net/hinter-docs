@@ -94,3 +94,22 @@ You can check the logs to ensure the new version started correctly.
 ```sh
 docker logs my-hinter-core
 ```
+
+### Update keypair
+
+You may want to update your keypair if it is compromised, or as a regular security practice.
+To do so, Stop the container named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
+
+```sh
+docker stop my-hinter-core
+```
+
+Back up or delete your old keypair, and then generate a new one using the command provided by the current [Quickstart guide](../hinter-net/quickstart.md).
+
+Restart hinter-core.
+
+```sh
+docker start my-hinter-core
+```
+
+Finally, you must share your new public key with your peers for them to be able to update your peer configuration on their end.
