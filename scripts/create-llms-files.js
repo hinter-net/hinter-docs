@@ -60,9 +60,12 @@ function generateLlmsFullTxt() {
       const match = link.match(/- \[(.*?)\]\((.*?)\)/);
       if (match) {
         const url = match[2];
-        const filePath = path.join(__dirname, '..', url.substring(1));
+        const relativeUrl = new URL(url).pathname;
+        const filePath = path.join(__dirname, '..', relativeUrl.substring(1) + '.md');
         if (fs.existsSync(filePath)) {
-          fullContent += fs.readFileSync(filePath, 'utf-8') + '\n\n';
+          let fileContent = fs.readFileSync(filePath, 'utf-8');
+          fileContent = fileContent.replace(/---[\s\S]*?---/, '').trim();
+          fullContent += fileContent + '\n\n';
         }
       }
     }
