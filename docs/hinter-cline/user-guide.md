@@ -50,9 +50,9 @@ except: ["peer-alias-3"]
 sourcePath: ""
 destinationPath: ""
 ---
-# My First Report
+# A Private Report
 
-This is the content that will be sent.
+Hi peer-alias-1 and my-friends, please do not share this with peer-alias-3.
 ```
 
 When you run `Sync reports`, the content of this file will be sent to `peer-alias-1` and all members of the `my-friends` group, except for `peer-alias-3`.
