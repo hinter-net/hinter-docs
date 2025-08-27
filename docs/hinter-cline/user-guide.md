@@ -57,6 +57,25 @@ This is the content that will be sent.
 
 When you run `Sync reports`, the content of this file will be sent to `peer-alias-1` and all members of the `my-friends` group, except for `peer-alias-3`.
 
+### Using the Implicit `all` Group
+
+You can refer to the implicit `all` group, which includes all your peers.
+
+```yaml
+---
+to: ["group:all"]
+except: []
+sourcePath: ""
+destinationPath: ""
+---
+# General Announcement
+
+Hi everyone!
+```
+
+When you run `Sync reports`, the content of this file will be sent to all your peers.
+You do not need to add or manage the `all` group.
+
 ## Git-based Workflow
 
 The `hinter-cline` container automatically initializes your `hinter-core-data/` directory as a Git repository on its first run.
