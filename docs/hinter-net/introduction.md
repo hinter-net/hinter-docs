@@ -3,6 +3,8 @@ sidebar_label: "Introduction"
 title: ""
 ---
 
+#
+
 ![Hinter Net Social Card](../../static/img/hinter-net-social-card.jpg)
 
 **Hinter Net** is a peer-to-peer network for collaborative intelligence, designed to scale human networking and collaboration beyond their natural limits.
