@@ -65,7 +65,13 @@ function generateLlmsFullTxt() {
         if (fs.existsSync(filePath)) {
           let fileContent = fs.readFileSync(filePath, 'utf-8');
           fileContent = fileContent.replace(/---[\s\S]*?---/, '').trim();
-          fullContent += fileContent + '\n\n';
+          const relativePath = path.relative(path.join(__dirname, '..'), filePath);
+          const lines = fileContent.split('\n');
+          const firstLineIndex = lines.findIndex(line => line.trim() !== '');
+          if (firstLineIndex !== -1) {
+            lines[firstLineIndex] = `${lines[firstLineIndex]} (${relativePath})`;
+          }
+          fullContent += lines.join('\n') + '\n\n';
         }
       }
     }
