@@ -38,7 +38,7 @@ function generateLlmsTxt() {
             const fileContent = fs.readFileSync(filePath, 'utf-8');
             const match = fileContent.match(/---\s*sidebar_label:\s*"(.*?)"\s*---/);
             const title = match ? match[1] : path.basename(file, '.md');
-            content += `- [${title}](/docs/${file}.md)\n`;
+            content += `- [${title}](https://hinter.net/docs/${file})\n`;
           }
         }
         content += '\n';
@@ -60,9 +60,18 @@ function generateLlmsFullTxt() {
       const match = link.match(/- \[(.*?)\]\((.*?)\)/);
       if (match) {
         const url = match[2];
-        const filePath = path.join(__dirname, '..', url.substring(1));
+        const relativeUrl = new URL(url).pathname;
+        const filePath = path.join(__dirname, '..', relativeUrl.substring(1) + '.md');
         if (fs.existsSync(filePath)) {
-          fullContent += fs.readFileSync(filePath, 'utf-8') + '\n\n';
+          let fileContent = fs.readFileSync(filePath, 'utf-8');
+          fileContent = fileContent.replace(/---[\s\S]*?---/, '').trim();
+          const relativePath = path.relative(path.join(__dirname, '..'), filePath);
+          const lines = fileContent.split('\n');
+          const firstLineIndex = lines.findIndex(line => line.trim() !== '');
+          if (firstLineIndex !== -1) {
+            lines[firstLineIndex] = `${lines[firstLineIndex]} (${relativePath})`;
+          }
+          fullContent += lines.join('\n') + '\n\n';
         }
       }
     }

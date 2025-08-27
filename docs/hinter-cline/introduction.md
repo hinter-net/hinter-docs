@@ -8,6 +8,12 @@ If [hinter-core](../hinter-core/introduction.md) is the engine of your network, 
 hinter-cline provides you with a personal instance of VS Code that runs in your browser, accessible at `localhost:8080`.
 This environment comes pre-packaged with [Cline](https://cline.bot), a sophisticated AI assistant, and is securely sandboxed within a Docker container.
 
+:::tip Don't Read, Chat!
+
+You can copy-paste [`llms-full.txt`](https://hinter.net/llms-full.txt) to your preferred AI.
+
+:::
+
 ### What You Do in hinter-cline:
 
 With the assistance of Cline, you can:
