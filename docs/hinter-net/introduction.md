@@ -13,3 +13,9 @@ This AI-augmented networking experience is delivered through two core applicatio
 
 - **[hinter-core](../hinter-core/introduction.md)**: Powers the secure, peer-to-peer exchange of reports.
 - **[hinter-cline](../hinter-cline/introduction.md)**: Serves as the AI-assisted command center for processing intelligence and composing reports.
+
+:::tip Don't Read, Chat!
+
+You can copy-paste [`llms-full.txt`](https://hinter.net/llms-full.txt) to your preferred AI.
+
+:::

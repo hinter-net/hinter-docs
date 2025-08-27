@@ -11,6 +11,12 @@ hinter-core is built using the [Pear Runtime](https://pears.com/), which provide
 hinter-core runs as a quiet background service, managing your cryptographic identity and handling the secure exchange of reports.
 It has no user interface of its own; its sole purpose is to be a robust and reliable data transport layer, allowing you to focus on crafting intelligence in its companion application, [hinter-cline](../hinter-cline/introduction.md).
 
+:::tip Don't Read, Chat!
+
+You can copy-paste [`llms-full.txt`](https://hinter.net/llms-full.txt) to your preferred AI.
+
+:::
+
 ### Key Features
 
 - **Identity Management**: Creates and stores your unique cryptographic keypair, which serves as your identity on the network.
