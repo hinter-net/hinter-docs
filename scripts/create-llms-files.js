@@ -38,7 +38,7 @@ function generateLlmsTxt() {
             const fileContent = fs.readFileSync(filePath, 'utf-8');
             const match = fileContent.match(/---\s*sidebar_label:\s*"(.*?)"\s*---/);
             const title = match ? match[1] : path.basename(file, '.md');
-            content += `- [${title}](/docs/${file})\n`;
+            content += `- [${title}](https://hinter.net/docs/${file})\n`;
           }
         }
         content += '\n';
