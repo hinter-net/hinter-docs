@@ -1,18 +1,24 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Quickstart
 
-This guide will walk you through installing hinter-core and hinter-cline, and connecting with your first peer.
-The entire setup runs inside Docker containers, which means it is completely isolated from the rest of your computer and safe to run.
-You also don't need to install any other development tools on your machine.
+This guide will walk you through installing hinter-core and hinter-cline and connecting to your first peer. 
+hinter-core runs natively on your machine, enabling it to manage peer-to-peer connections by accessing your network interface directly.
+hinter-cline runs inside a Docker container, providing a standardized user environment and sandboxing the AI assistant as a security best practice.
 
 ## Prerequisites
 
+- [Node.js](https://nodejs.org/) (v22 or later) installed.
+- [pm2](https://pm2.keymetrics.io/) installed with the following command.
+  ```sh
+  npm install -g pm2
+  ```
+- hinter-core installed with the following command.
+  ```sh
+  npm install -g @hinter-net/hinter-core@0.2.0
+  ```
 - [Docker Desktop](https://docs.docker.com/desktop/) installed and running.
-- On Docker Desktop, [enable host networking](https://docs.docker.com/engine/network/drivers/host/#docker-desktop).
-
-  :::info Host Networking Required
-  Host networking is required for hinter-core to communicate with peers.
-  If you find yourself having networking issues due to the host networking feature not working reliably, you can try [running hinter-core without Docker](../hinter-core/troubleshooting.md#running-hinter-core-without-docker).
-  :::
 
 ## Step 1: Run hinter-core
 
@@ -24,33 +30,41 @@ It needs to be running in the background to send and receive reports.
     Open a terminal and run the following command.
 
     ```sh
-    docker run -it --rm -v"$(pwd)/hinter-core-data":/hinter-core/hinter-core-data bbenligiray/hinter-core:0.1.1 npm run initialize
+    hinter-core-initialize
     ```
 
-    This creates a `hinter-core-data/` directory in your current location, which will store all your data and your unique cryptographic keypair.
-
-    :::tip Do not use Command Prompt on Windows
-    Use PowerShell or WSL CLI, and not the Command Prompt (CMD) on Windows.
-    For example, the terminal in Docker Desktop uses PowerShell by default and is suitable to run these commands.
-    :::
+    This creates a `hinter-core-data/` directory in your home directory, which will store all your data and your unique cryptographic keypair.
 
 2.  **Start hinter-core in the Background**
 
-    Now, run this command to start the hinter-core container.
-    It's set to always restart, so it will launch automatically even after you restart your computer.
+    Start hinter-core using pm2.
 
     ```sh
-    docker run -d --name my-hinter-core --restart=always --network host -v"$(pwd)/hinter-core-data":/hinter-core/hinter-core-data bbenligiray/hinter-core:0.1.1
+    pm2 start hinter-core --name my-hinter-core
     ```
 
     :::tip Check Your Logs
     You won't see hinter-core output because it's running in the background, but you can check its logs anytime with:
 
     ```sh
-    docker logs my-hinter-core
+    pm2 logs my-hinter-core
     ```
 
     :::
+
+    Save a snapshot of the apps that pm2 is currently running (in this case, only hinter-core).
+
+    ```sh
+    pm2 save
+    ```
+
+    Generate a startup script that will restore the snapshot you just took.
+
+    ```sh
+    pm2 startup
+    ```
+
+    Finally, run the command printed by `pm2 startup` to configure the startup script to run when your machine starts.
 
 ## Step 2: Run hinter-cline
 
@@ -59,11 +73,26 @@ It comes with Cline, an AI assistant extension for VS Code.
 
 1.  **Start hinter-cline in the Background**
 
-    In your terminal, run:
+    Run this command to start the hinter-cline container.
+    It's set to always restart, so it will launch automatically even after you restart your computer.
 
+    <Tabs groupId="operating-systems">
+    <TabItem value="linux" label="Linux/macOS/WSL2" default>
     ```sh
-    docker run -d --name my-hinter-cline --restart=always -p 8080:8080 -v"$(pwd)/hinter-core-data":/hinter-cline/hinter-core-data bbenligiray/hinter-cline:0.2.0
+        docker run -d --name my-hinter-cline --restart=always --user $(id -u):$(id -g) -p 8080:8080 -v"$(node -p "require('os').homedir()")/hinter-core-data:/hinter-cline/hinter-core-data" bbenligiray/hinter-cline:0.2.2
     ```
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+    ```sh
+        docker run -d --name my-hinter-cline --restart=always -p 8080:8080 -v"$(node -p 'require(\"os\").homedir()')/hinter-core-data:/hinter-cline/hinter-core-data" bbenligiray/hinter-cline:0.2.2
+    ```
+    </TabItem>
+    </Tabs>
+
+    :::tip Do not use Command Prompt on Windows
+    Use PowerShell or WSL CLI, and not the Command Prompt (CMD) on Windows.
+    For example, the terminal in Docker Desktop uses PowerShell by default and is suitable to run these commands.
+    :::
 
     This starts the hinter-cline container and makes it accessible on port `8080`.
     It shares the `hinter-core-data/` directory with hinter-core, so it can access your peers and reports.
