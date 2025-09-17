@@ -8,6 +8,28 @@ While hinter-core runs as a headless background service, it is managed entirely 
 Understanding its directories and configuration files is key to managing your network and troubleshooting issues.
 All of your data is stored in the `hinter-core-data/` directory.
 
+## `--data-dir` Argument
+
+The quickstart guide had you run hinter-core with no arguments, which requires `hinter-core-data/` to be in your home directory.
+
+To customize the path of this directory, you can run hinter-core with the `--data-dir` argument.
+For example, if `hinter-core-data/` is in your current working directory, you can use the following command.
+
+```sh
+hinter-core --data-dir "$(pwd)/hinter-core-data"
+```
+
+Similarly, you can use the `--data-dir` argument while running hinter-core with pm2.
+Note that the `--` indicates where pm2 arguments end and where hinter-core arguments begin.
+
+```sh
+pm2 start hinter-core --name my-hinter-core -- --data-dir "$(pwd)/hinter-core-data"
+```
+
+The `--data-dir` value must be an absolute path.
+hinter-core will reject relative paths such as `./hinter-core-data`.
+This is because hinter-core is expected to be run by pm2 at startup, where the relative path would not resolve correctly.
+
 ## Directory Structure
 
 The `hinter-core-data/` directory is the heart of your Hinter Net presence.
