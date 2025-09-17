@@ -49,7 +49,6 @@ const sidebars = {
         'hinter-core/user-guide',
         'hinter-core/design-and-protocol',
         'hinter-core/security-practices',
-        'hinter-core/troubleshooting',
       ],
     },
   ],
