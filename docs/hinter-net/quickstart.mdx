@@ -86,12 +86,12 @@ It comes with Cline, an AI assistant extension for VS Code.
     <Tabs groupId="operating-systems">
     <TabItem value="linux" label="Linux/macOS/WSL2" default>
     ```sh
-        docker run -d --name my-hinter-cline --restart=always --user $(id -u):$(id -g) -p 8080:8080 -v"$(node -p "require('os').homedir()")/hinter-core-data:/hinter-cline/hinter-core-data" bbenligiray/hinter-cline:0.2.3
+        docker run -d --name my-hinter-cline --restart=always --user $(id -u):$(id -g) -p 8080:8080 -v"$(node -p "require('os').homedir()")/hinter-core-data:/hinter-cline/hinter-core-data" bbenligiray/hinter-cline:0.2.4
     ```
     </TabItem>
     <TabItem value="windows" label="Windows">
     ```sh
-        docker run -d --name my-hinter-cline --restart=always -p 8080:8080 -v"$(node -p 'require(\"os\").homedir()')/hinter-core-data:/hinter-cline/hinter-core-data" bbenligiray/hinter-cline:0.2.3
+        docker run -d --name my-hinter-cline --restart=always -p 8080:8080 -v"$(node -p 'require(\"os\").homedir()')/hinter-core-data:/hinter-cline/hinter-core-data" bbenligiray/hinter-cline:0.2.4
     ```
     </TabItem>
     </Tabs>
