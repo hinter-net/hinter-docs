@@ -8,6 +8,13 @@ title: ""
 As a general rule, back up your entire `hinter-core-data/` directory before attempting any of the following.
 Do not remove the backup until you confirm that the operation is successful.
 
+### Undo Peer Blacklisting
+
+hinter-core automatically blacklists peers that may disrupt its operation, for example, because the peer is running two hinter-core instances with the same keypair in parallel.
+It does this by creating a `hinter-core-data/peers/{PEER_ALIAS}/.blacklisted` file, which contains a message that explains the reason.
+You can undo the blacklist by simply deleting the `.blacklisted` file.
+However, note that the peer will soon be blacklisted again if the underlying reason isn't resolved.
+
 ### Upgrade hinter-core to Latest Version
 
 Stop and delete the pm2 process named `my-hinter-core` that you created while following the [Quickstart guide](../../hinter-net/quickstart.mdx).
