@@ -24,4 +24,4 @@ You can copy-paste [`llms-full.txt`](https://hinter.net/llms-full.txt) to your p
 - **Report Synchronization**: Automatically sends and receives report files.
 - **End-to-end Security**: All communication is direct, P2P, and end-to-end encrypted, with no central servers.
 
-To learn how to manage its configuration and directory structure, see the **[User Guide](./user-guide.md)**.
+To learn how to manage its configuration and directory structure, see the **[User Guide](./user-guide/hinter-core-data.md)**.

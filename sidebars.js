@@ -46,7 +46,15 @@ const sidebars = {
       collapsible: false,
       items: [
         'hinter-core/introduction',
-        'hinter-core/user-guide',
+        {
+          type: 'category',
+          label: 'User Guide',
+          items: [
+            'hinter-core/user-guide/hinter-core-data',
+            'hinter-core/user-guide/hinter-config-json',
+            'hinter-core/user-guide/how-to',
+          ],
+        },
         'hinter-core/design-and-protocol',
         'hinter-core/security-practices',
       ],
