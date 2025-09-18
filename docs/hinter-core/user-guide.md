@@ -1,7 +1,7 @@
 # User Guide
 
 :::info Prerequisites
-This guide assumes you have completed the [Quickstart guide](../hinter-net/quickstart.md).
+This guide assumes you have completed the [Quickstart guide](../hinter-net/quickstart.mdx).
 :::
 
 While hinter-core runs as a headless background service, it is managed entirely through its file structure.
@@ -33,7 +33,7 @@ This is because hinter-core is expected to be run by pm2 at startup, where the r
 ## Directory Structure
 
 The `hinter-core-data/` directory is the heart of your Hinter Net presence.
-It is created when you run the initialization script, as described in the [Quickstart guide](../hinter-net/quickstart.md).
+It is created when you run the initialization script, as described in the [Quickstart guide](../hinter-net/quickstart.mdx).
 
 ```
 hinter-core-data/

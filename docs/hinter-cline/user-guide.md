@@ -1,7 +1,7 @@
 # User Guide
 
 :::info Prerequisites
-This guide assumes you have completed the [Quickstart guide](../hinter-net/quickstart.md).
+This guide assumes you have completed the [Quickstart guide](../hinter-net/quickstart.mdx).
 :::
 
 The primary way you will manage your peers, groups, and reports is through the interactive command-line helper tool.
@@ -89,14 +89,14 @@ You can review the diffs yourself in the VS Code interface or have your AI assis
 
 ### Upgrade hinter-cline to Latest Version
 
-Stop and remove the container named `my-hinter-cline` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
+Stop and remove the container named `my-hinter-cline` that you created while following the [Quickstart guide](../hinter-net/quickstart.mdx).
 
 ```sh
 docker stop my-hinter-cline
 docker rm my-hinter-cline
 ```
 
-Then, start hinter-cline using the command provided by the current [Quickstart guide](../hinter-net/quickstart.md), which will use the latest version.
+Then, start hinter-cline using the command provided by the current [Quickstart guide](../hinter-net/quickstart.mdx), which will use the latest version.
 
 :::info Migrating Through Breaking Changes
 Some releases introduce breaking changes that require the user to handle.
