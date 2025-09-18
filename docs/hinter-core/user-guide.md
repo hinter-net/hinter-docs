@@ -1,21 +1,44 @@
 # User Guide
 
 :::info Prerequisites
-This guide assumes you have completed the [Quickstart guide](../hinter-net/quickstart.md).
+This guide assumes you have completed the [Quickstart guide](../hinter-net/quickstart.mdx).
 :::
 
 While hinter-core runs as a headless background service, it is managed entirely through its file structure.
 Understanding its directories and configuration files is key to managing your network and troubleshooting issues.
 All of your data is stored in the `hinter-core-data/` directory.
 
+## `--data-dir` Argument
+
+The quickstart guide had you run hinter-core with no arguments, which requires `hinter-core-data/` to be in your home directory.
+
+To customize the path of this directory, you can run hinter-core with the `--data-dir` argument.
+For example, if `hinter-core-data/` is in your current working directory, you can use the following command.
+
+```sh
+hinter-core --data-dir "$(pwd)/hinter-core-data"
+```
+
+Similarly, you can use the `--data-dir` argument while running hinter-core with pm2.
+Note that the `--` indicates where pm2 arguments end and where hinter-core arguments begin.
+
+```sh
+pm2 start hinter-core --name my-hinter-core -- --data-dir "$(pwd)/hinter-core-data"
+```
+
+The `--data-dir` value must be an absolute path.
+hinter-core will reject relative paths such as `./hinter-core-data`.
+This is because hinter-core is expected to be run by pm2 at startup, where the relative path would not resolve correctly.
+
 ## Directory Structure
 
 The `hinter-core-data/` directory is the heart of your Hinter Net presence.
-It is created when you run the initialization script, as described in the [Quickstart guide](../hinter-net/quickstart.md).
+It is created when you run the initialization script, as described in the [Quickstart guide](../hinter-net/quickstart.mdx).
 
 ```
 hinter-core-data/
 ├── .env                        # Your private keypair
+├── .storage/                   # Automatically generated cache storage directory
 ├── hinter.config.json          # Global configuration (optional)
 └── peers/
     └── {PEER_ALIAS}/           # Directory for a specific peer
@@ -28,6 +51,8 @@ hinter-core-data/
   - Share the `PUBLIC_KEY` with others so they can add you as a peer.
   - **Never share your `SECRET_KEY`**.
     It is the private key that controls your identity.
+- **`.storage/`**: This directory gets generated automatically by hinter-core and acts as a cache storage for network data.
+  It needs to be deleted while [moving `hinter-core-data/`](#migrate-to-another-working-directory-or-machine).
 - **`peers/`**: This directory contains a sub-directory for each peer you add.
 - **`peers/{PEER_ALIAS}/incoming/`**: Contains reports received from this peer.
   This directory is managed by hinter-core and should be treated as read-only.
@@ -73,61 +98,71 @@ You can also add any of the global configuration keys here to override the defau
 
 ## How to
 
+As a general rule, back up your entire `hinter-core-data/` directory before attempting any of the following.
+Do not remove the backup until you confirm that the operation is successful.
+
 ### Upgrade hinter-core to Latest Version
 
-Stop and remove the container named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
+Stop and delete the pm2 process named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.mdx).
 
 ```sh
-docker stop my-hinter-core
-docker rm my-hinter-core
+pm2 stop my-hinter-core
+pm2 delete my-hinter-core
 ```
 
-Then, start hinter-core using the command provided by the current [Quickstart guide](../hinter-net/quickstart.md), which will use the latest version.
+Then, install the latest hinter-core version and configure pm2 using the commands provided by the current [Quickstart guide](../hinter-net/quickstart.mdx).
+
+
+You can check the logs to ensure the new version started correctly.
+
+```sh
+pm2 logs my-hinter-core
+```
 
 :::info Migrating Through Breaking Changes
 Some releases introduce breaking changes that require the user to handle.
 Always read the respective [Release Notes](https://github.com/hinter-net/hinter-core/releases) before upgrading.
 :::
 
-You can check the logs to ensure the new version started correctly.
-
-```sh
-docker logs my-hinter-core
-```
-
 ### Update Keypair
 
 You may want to update your keypair if it is compromised, or as a regular security practice.
-To do so, Stop the container named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
+To do so, stop the pm2 process named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.mdx).
 
 ```sh
-docker stop my-hinter-core
+pm2 stop my-hinter-core
 ```
 
-Back up or delete your old keypair, and then generate a new one using the command provided by the current [Quickstart guide](../hinter-net/quickstart.md).
-
-Restart hinter-core.
+Use the following command to initialize a new hinter-core directory named `delete-after-use/`.
 
 ```sh
-docker start my-hinter-core
+hinter-core-initialize --data-dir "$(pwd)/delete-after-use"
+```
+
+Overwrite the `.env` file in your `hinter-core-data/` directory with the `.env` file in `delete-after-use/`, and then delete the `delete-after-use/` directory.
+
+Restart the pm2 process for hinter-core.
+
+```sh
+pm2 start my-hinter-core
 ```
 
 Finally, you must share your new public key with your peers for them to be able to update your peer configuration on their end.
 
-### Migrate to Another Machine
+### Migrate to Another Working Directory or Machine
 
-Stop and remove the container named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.md).
+Stop and remove the pm2 process named `my-hinter-core` that you created while following the [Quickstart guide](../hinter-net/quickstart.mdx).
 
 ```sh
-docker stop my-hinter-core
-docker rm my-hinter-core
+pm2 stop my-hinter-core
+pm2 delete my-hinter-core
 ```
 
-Copy over your `hinter-core-data/` directory to the new machine in its entirety.
+Copy over your `hinter-core-data/` directory to the new machine, except the `.storage/` directory in it.
 
-Follow the [Quickstart guide](../hinter-net/quickstart.md) to start hinter-core on the new machine, skipping the initialization step.
+Follow the [Quickstart guide](../hinter-net/quickstart.mdx) to start hinter-core on the new machine, skipping the initialization step.
 
 :::warning Avoid Parallel Instances With the Same Keypair
 hinter-core is designed to be operated as a single instance.
-Avoid running multiple instances with the same keypair.
+Do not run multiple instances with the same keypair.
 :::
