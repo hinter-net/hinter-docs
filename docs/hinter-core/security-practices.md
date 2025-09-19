@@ -26,7 +26,7 @@ Do not use any additional software that is able to spy on you (e.g. Windows Copi
 ### Vet Upgrades and Build Locally
 
 Before upgrading hinter-core to a new version, review the code changes in the new version.
-Pull the tagged commit and build the Docker image locally on your own machine.
+Pull the tagged commit and build the npm package locally on your own machine.
 
 ### Encrypt Your Data
 
@@ -38,9 +38,9 @@ Anonymize your IP address using a VPN or Tor for privacy.
 
 ### Use a Custom DHT Bootstrap Node
 
-hinter-core uses the DHT bootstrap nodes provided by the Pear stack by default.
+hinter-core uses the DHT bootstrap nodes provided by the Hypercore stack by default.
 Run your own and configure hinter-core to use it.
 
-### Be Available 24/7
+### Randomize Activity Patterns
 
-Keep your hinter-core instance online 24/7 to avoid exposing your timezone and daily activity patterns.
+Randomize your activity patterns to hide your timezone and schedule.
