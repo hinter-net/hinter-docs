@@ -50,6 +50,6 @@ The sender's directory is treated as the definitive source of truth.
 3.  **One-Way Mirroring**: For each peer connection, the synchronization is one-way.
     The recipient peer downloads any changes it is missing from the sender's log.
     The recipient always defers to the sender's log; the sender's machine knows best what it wants to send.
-4.  **File System Update**: As the recipient receives new log entries, it updates its `incoming/{SENDER_ALIAS}` directory to perfectly mirror the sender's `outgoing/` directory.
+4.  **File System Update**: As the recipient receives new log entries, it updates its `incoming/{SENDER_ALIAS}` directory to perfectly mirror the sender's `{RECIPIENT_ALIAS}/outgoing/` directory.
 
 This append-only log structure provides a robust and efficient way to keep directories synchronized between peers in a decentralized manner, with a clear chain of authority for the data being exchanged.
