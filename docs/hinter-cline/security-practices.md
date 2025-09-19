@@ -15,7 +15,7 @@ Information received from a non-trusted peer is not actionable, and you cannot d
 Furthermore, adding any peer creates a potential, if small, attack surface.
 For these reasons, you should only add peers you trust.
 
-## Vet Real-World Identities
+## Vet Real-world Identities
 
 To protect yourself against impersonation of real or fabricated identities by humans or bots, it is crucial to vet the real-world identity of anyone you add as a peer.
 

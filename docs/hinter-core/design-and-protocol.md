@@ -47,7 +47,7 @@ The sender's directory is treated as the definitive source of truth.
 1.  **Append-only Log**: Each peer maintains an append-only log of its `outgoing/` directory.
     When a file is added, modified, or deleted, a new entry is appended to this log, creating a verifiable history of changes.
 2.  **Peer Connection**: When two peers connect, they exchange information about their logs.
-3.  **One-Way Mirroring**: For each peer connection, the synchronization is one-way.
+3.  **One-way Mirroring**: For each peer connection, the synchronization is one-way.
     The recipient peer downloads any changes it is missing from the sender's log.
     The recipient always defers to the sender's log; the sender's machine knows best what it wants to send.
 4.  **File System Update**: As the recipient receives new log entries, it updates its `incoming/{SENDER_ALIAS}` directory to perfectly mirror the sender's `{RECIPIENT_ALIAS}/outgoing/` directory.

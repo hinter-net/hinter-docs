@@ -21,7 +21,7 @@ When the `peerSizeLimitMB` is exceeded, the peer is blacklisted by creating an e
 To undo the blacklisting, the conditions that caused the blacklisting must be reversed, and this file needs to be deleted manually.
 :::
 
-### Peer-Specific Configuration
+### Peer-specific Configuration
 
 Each peer's configuration is stored at `hinter-core-data/peers/{PEER_ALIAS}/hinter.config.json`.
 This file is created automatically when you add a peer with the hinter-cline helper tool.
