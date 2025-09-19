@@ -41,7 +41,7 @@ Under the hood, hinter-core uses a collection of modules for building peer-to-pe
 
 ### How Synchronization Works
 
-Synchronization in hinter-core is a process of mirroring a sender's `outgoing/` directory to a recipient's `incoming/{SENDER_ALIAS}` directory.
+Synchronization in hinter-core is a process of mirroring a sender's `{RECIPIENT_ALIAS}/outgoing/` directory to a recipient's `{SENDER_ALIAS}/incoming` directory.
 The sender's directory is treated as the definitive source of truth.
 
 1.  **Append-only Log**: Each peer maintains an append-only log of its `outgoing/` directory.
