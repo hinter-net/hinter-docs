@@ -33,8 +33,11 @@ function generateLlmsTxt() {
         content += `## ${category.label}\n\n`;
         const files = getMarkdownFiles(category.items);
         for (const file of files) {
-          const filePath = path.join(docsDir, `${file}.md`);
-          if (fs.existsSync(filePath)) {
+          const mdPath = path.join(docsDir, `${file}.md`);
+          const mdxPath = path.join(docsDir, `${file}.mdx`);
+          const filePath = fs.existsSync(mdPath) ? mdPath : fs.existsSync(mdxPath) ? mdxPath : null;
+
+          if (filePath) {
             const fileContent = fs.readFileSync(filePath, 'utf-8');
             const match = fileContent.match(/---\s*sidebar_label:\s*"(.*?)"\s*---/);
             const title = match ? match[1] : path.basename(file, '.md');
@@ -61,8 +64,12 @@ function generateLlmsFullTxt() {
       if (match) {
         const url = match[2];
         const relativeUrl = new URL(url).pathname;
-        const filePath = path.join(__dirname, '..', relativeUrl.substring(1) + '.md');
-        if (fs.existsSync(filePath)) {
+        const docPath = path.join(__dirname, '..', relativeUrl.substring(1));
+        const mdPath = docPath + '.md';
+        const mdxPath = docPath + '.mdx';
+        const filePath = fs.existsSync(mdPath) ? mdPath : fs.existsSync(mdxPath) ? mdxPath : null;
+
+        if (filePath) {
           let fileContent = fs.readFileSync(filePath, 'utf-8');
           fileContent = fileContent.replace(/---[\s\S]*?---/, '').trim();
           const relativePath = path.relative(path.join(__dirname, '..'), filePath);
