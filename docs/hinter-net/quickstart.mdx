@@ -46,9 +46,18 @@ It needs to be running in the background to send and receive reports.
 
     Start hinter-core using pm2.
 
+    <Tabs groupId="operating-systems">
+    <TabItem value="linux" label="Linux/macOS/WSL2" default>
     ```sh
     pm2 start hinter-core --name my-hinter-core
     ```
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+    ```sh
+    pm2 start node --name my-hinter-core -- -e "require('child_process').spawn('cmd',['/c','hinter-core'],{stdio:'inherit',windowsHide:true})"
+    ```
+    </TabItem>
+    </Tabs>
 
     :::tip Check Your Logs
     You won't see hinter-core output because it's running in the background, but you can check its logs anytime with:
@@ -59,19 +68,24 @@ It needs to be running in the background to send and receive reports.
 
     :::
 
-    Save a snapshot of the apps that pm2 is currently running (in this case, only hinter-core).
+    Configure pm2 to start hinter-core automatically when your machine starts.
 
+    <Tabs groupId="operating-systems">
+    <TabItem value="linux" label="Linux/macOS/WSL2" default>
     ```sh
     pm2 save
-    ```
-
-    Generate a startup script that will restore the snapshot you just took.
-
-    ```sh
     pm2 startup
+    # ...and finally, run the command printed by `pm2 startup`.
     ```
-
-    Finally, run the command printed by `pm2 startup` to configure the startup script to run when your machine starts.
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+    ```sh
+    npm install -g pm2-windows-startup@1.0.3
+    pm2-startup install
+    pm2 save
+    ```
+    </TabItem>
+    </Tabs>
 
 ## Step 2: Run hinter-cline
 
