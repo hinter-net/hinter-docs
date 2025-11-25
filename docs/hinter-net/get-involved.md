@@ -45,5 +45,5 @@ However, always remember the security implications of using third-party tools an
 
 These channels are primarily for initial contact, announcements, and finding your first peers.
 
-- **Discord**: The [Api3 Discord](https://discord.gg/api3dao) has channels dedicated to Hinter Net for public discussion.
+- **Discord**: The [Hinter Net Discord](placeholder) has channels for public discussion.
 - **X**: Follow [@hinter_net](https://x.com/hinter_net) for updates.

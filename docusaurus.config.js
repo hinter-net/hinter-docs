@@ -129,7 +129,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discord.gg/api3dao',
+                href: 'placeholder',
               },
               {
                 label: 'X',
