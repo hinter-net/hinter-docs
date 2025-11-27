@@ -55,7 +55,7 @@ Ready to get started?
 
 - **Check out the [Quickstart guide](/docs/hinter-net/quickstart)** to get your own instance running in minutes.
 - **Explore the [Documentation](/docs/hinter-net/introduction)** to dive deeper into the core concepts and design philosophy.
-- **Join the conversation** on the [Discord server](placeholder) to find your first peers and help shape the future of the network.
+- **Join the conversation** on the [Discord server](https://hinter.net/404) to find your first peers and help shape the future of the network.
 
 Welcome to Hinter Net.
 Let's build a better internet, together.

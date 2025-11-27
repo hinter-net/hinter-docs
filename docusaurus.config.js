@@ -129,7 +129,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'placeholder',
+                href: 'https://hinter.net/404',
               },
               {
                 label: 'X',
